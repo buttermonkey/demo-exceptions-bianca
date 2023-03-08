@@ -8,6 +8,9 @@ public class RealDealDemo {
 				printEvenNumber(rnd.nextInt(10));
 				printOddNumber(rnd.nextInt(10));
 			} catch(NotACorrectNumberException e) {
+				if (e instanceof NotAnOddNumberException) {
+					((NotAnOddNumberException) e).printMe();
+				}
 				System.out.println("Something went wrong, but I don't care enough to do anything about it.");
 			}
 		}
